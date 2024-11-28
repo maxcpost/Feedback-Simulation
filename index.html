@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audio Feedback Management Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Feedback Simulation</h1>
+        <p>Silence feedback and amp up your DJ game!</p>
+    </header>
+
+    <main>
+        <section id="game-area">
+            <div id="placement-game" class="game-section">
+                <div id="simulation-container">
+                    <!-- Simulation Canvas -->
+                    <div id="venue">
+                        <canvas id="venue-canvas" width="800" height="600"></canvas>
+                    </div>
+
+                    <!-- Side Tool Panel -->
+                    <div id="tool-panel">
+                        <div class="control-group">
+                            <label for="mic-type-select">Microphone Type:</label>
+                            <select id="mic-type-select">
+                                <option value="cardioid">Cardioid</option>
+                                <option value="supercardioid">Supercardioid</option>
+                                <option value="hypercardioid">Hypercardioid</option>
+                                <option value="omnidirectional">Omnidirectional</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label for="speaker-volume">Speaker Volume:</label>
+                            <input type="range" id="speaker-volume" min="0" max="100" value="50">
+                        </div>
+                        <div class="control-group">
+                            <label for="mic-angle">Microphone Rotation:</label>
+                            <input type="range" id="mic-angle" min="0" max="360" value="0">
+                        </div>
+                        <div class="control-group">
+                            <button id="add-speaker-btn">Add Speaker</button>
+                            <button id="remove-speaker-btn">Remove Speaker</button>
+                        </div>
+                        <div id="speaker-controls-container"></div>
+                        <button id="placement-submit">Check Setup</button>
+                        <p id="placement-feedback"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; DJ RICH POST</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
